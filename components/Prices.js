@@ -18,8 +18,6 @@ class Prices extends React.Component{
             Bitcoin rate for {this.props.bpi.EUR.description} : <span className="badge badge-primary">{this.props.bpi.EUR.code}</span> <strong>{this.props.bpi.EUR.rate}</strong></li>
         }
             
-
-
         return(
             <div className="row">
                 <div className="col-lg-6 colmd-6 col-sm-12 col-xs-12">
@@ -28,13 +26,14 @@ class Prices extends React.Component{
                     </ul>
                 </div>
                 <div className="col-lg-6 colmd-6 col-sm-12 col-xs-12">
-                    <select onChange={e => this.setState({currency: e.target.value})} className="form-control">
+                    <select onChange={e => this.setState({currency: e.target.value})} className="form-control" style={{height:50 +'px'}}>
                         <option value="USD">USD</option>
                         <option value="GBP">GMP</option>
                         <option value="EUR">EUR</option>
                     </select>
                 </div>
-            </div>)
+            </div>
+        )
     }
 }
 export default Prices;
